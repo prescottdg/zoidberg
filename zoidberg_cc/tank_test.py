@@ -1,7 +1,7 @@
 """
 Tank test
 
-Run 3 basic motion behviors in a row.
+Run 3 basic motion behaviors in a row.
 """
 
 from time import time
@@ -12,21 +12,21 @@ from zoidberg import PixhawkNode, episode, change_heading,\
                      change_depth, drive_robot
 
 # Linux address
-device = '/dev/ttyACM0'
+#device = '/dev/ttyACM0'
 # Mac OSX address
 #device = '/dev/tty.usbmodem1'
 # Windows address
-#device = 'COM3'
+device = 'COM3'
 
 target_heading = 80  # random choice - will be changed after calibrating in pool
 target_depth = 0.3  # not too deep for a tank test
-forward_speed = 10  # not too fast for a tank test
-side_speed = 10 # not too fast of a value
+forward_speed = 4  # not too fast for a tank test
+side_speed = 4 # not too fast of a value
 
 heading_time = 10  # max heading task time, seconds
 depth_time = 10  # max depth task time, seconds
 drive_time = 10  # max drive task time, seconds
-total_time = 10
+total_time = 4
 
 # setup devices
 pn = PixhawkNode(device)
